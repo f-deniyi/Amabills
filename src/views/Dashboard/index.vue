@@ -349,7 +349,7 @@ p {
   }
   .dashboard-cards-container {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) !important;
     grid-gap: 12px;
   }
   .dashboard-container {
