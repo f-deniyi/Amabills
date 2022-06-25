@@ -1,6 +1,7 @@
 <template>
   <AppLayout>
-    <div className="mb-4">
+    <div className='dashboard-container'>
+    <div className="mb-4 ">
       <div className=" dashboard-cards-container ">
         <div className="card  border-none ">
           <img src="../../assets/card.png" className="card-grad-img" />
@@ -53,11 +54,11 @@
       </div>
     </div>
     <div className="row">
-      <div className="col-sm-12 col-md-6">
+      <div className="col-sm-12 col-md-7">
         <div
-          className="d-flex justify-content-between align-items-center post-header  py-1 mb-1"
+          className="d-sm-block d-md-flex justify-content-between align-items-center post-header  py-1 mb-1"
         >
-          <div class="d-flex">
+          <div class="d-flex mb-2">
             <img src="../../assets/chat.png" />
 
             <p>Recent General Feeds</p>
@@ -132,6 +133,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </AppLayout>
 </template>
@@ -312,8 +314,9 @@ p {
 .feed-poster {
   font-weight: 600;
   font-size: 16.2908px;
-  margin-right: 2px;
+  /* margin-right: 2px; */
   color: #000000;
+  margin-left:6px;
 }
 .feed {
   font-weight: 500;
@@ -321,4 +324,38 @@ p {
 
   color: #403c3c;
 }
+@media(max-width:768px){
+  .main{
+    margin: 0 0 0 0;
+  /* background: black; */
+  /* height: 100vh; */
+  padding: 0 ;
+  }
+  .dashboard-cards-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) ;
+  grid-gap: 12px;
+}
+.dashboard-container{
+  margin:auto;
+  width:90%;
+}
+.feed-date {
+  font-weight: 400;
+  font-size: 12px;
+  color: #6b6a6a;
+}
+.feed-poster {
+  font-weight: 400;
+  font-size: 13.908px;
+  margin-right: 2px;
+  color: #000000;
+}
+.feed-search-container {
+  /* width:%; */
+  margin-bottom:5px;
+}
+
+}
+
 </style>

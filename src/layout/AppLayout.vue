@@ -1,6 +1,6 @@
 <template>
   <div class="app-layout">
-    <div className="side-bar">
+    <div className="side-bar d-none d-md-block">
       <div className="logo">
         <img src="../assets/logo.png" />
       </div>
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div className="main">
-      <div className="nav-bar">
+      <div className="nav-bar d-none d-md-flex">
         <div className="search-container">
           <div className="search-icon">
             <img src="../assets/search.png" />
@@ -39,6 +39,26 @@
           </div>
         </div>
       </div>
+      <div className="d-flex justify-content-between align-items-center py-3 px-3 mb-3 d-md-none mobile-nav-content">
+        <div>
+          <img src='../assets/mobile-nav.png'/>
+          </div>
+        <div className="d-flex align-items-center justify-content-end">
+          <div>
+            <img className="notification-" src="../assets/notification.png" width='30' />
+          </div>
+            <p class="user-name">Hi, Olayimika</p>
+          <div className="">
+            <img className="" src="../assets/user.png" width='30' />
+          </div>
+        </div>
+      </div>
+      <div className="mobile-search-container d-sm-block d-md-none mb-3 mx-auto ">
+          <div className="search-icon">
+            <img src="../assets/search.png" />
+          </div>
+          <input type="text" className="search-field" placeholder="Search" />
+        </div>
       <slot></slot>
     </div>
   </div>
@@ -48,7 +68,17 @@
 <script>
 import dashboard from "../assets/dashboard-icon.png";
 import settings from "../assets/Settings-icon.png";
-
+import i1 from "../assets/1 2.png";
+import i2 from "../assets/2 2.png";
+import i3 from "../assets/3 2.png";
+import i4 from "../assets/4 2.png";
+import i5 from "../assets/5.png";
+import i6 from "../assets/6.png";
+import i7 from "../assets/7.png";
+import i8 from "../assets/8.png";
+import i9 from "../assets/9.png";
+import i10 from "../assets/10.png";
+import i11 from "../assets/11.png";
 export default {
   name: "AppLayout",
   props: {
@@ -75,77 +105,77 @@ export default {
           name: "Feeds",
           url: "/feedssettings",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i1,
           inActiveIcon: "../assets/Settings-icon.png",
         },
         {
           name: "User managements",
           url: "/settings",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i2,
           inActiveIcon: "../assets/Settings-icon.png",
         },
         {
           name: "Contacts managements",
           url: "/settings",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i3,
           inActiveIcon: "../assets/Settings-icon.png",
         },
         {
           name: "Departments",
           url: "/departments",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i4,
           inActiveIcon: "../assets/Settings-icon.png",
         },
         {
           name: "Schedule & Reports",
           url: "/settings",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i5,
           inActiveIcon: "../assets/Settings-icon.png",
         },
         {
           name: "Inventory",
           url: "/settings",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i6,
           inActiveIcon: "../assets/Settings-icon.png",
         },
         {
           name: "Sales & Payments",
           url: "/settings",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i7,
           inActiveIcon: "../assets/Settings-icon.png",
         },
         {
           name: "Companies",
           url: "/settings",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i8,
           inActiveIcon: "../assets/Settings-icon.png",
         },
         {
           name: "Requests",
           url: "/settings",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i9,
           inActiveIcon: "../assets/Settings-icon.png",
         },
         {
           name: "Messaging",
           url: "/settings",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i10,
           inActiveIcon: "../assets/Settings-icon.png",
         },
         {
           name: "Conferencing",
           url: "/settings",
           type: "parent",
-          activeIcon: settings,
+          activeIcon: i11,
           inActiveIcon: "../assets/Settings-icon.png",
         },
       ],
@@ -208,6 +238,15 @@ p {
   align-items: center;
   width: 300px;
 }
+.mobile-search-container{
+  background: #f0f0f0;
+
+  border-radius: 10px;
+  display: flex;
+  padding: 5px 16px;
+  align-items: center;
+  width: 90%;
+}
 .search-icon {
   padding-top: 0px;
   margin-right: 3px;
@@ -234,9 +273,10 @@ p {
 .user-details {
   display: flex;
   align-items: center;
+  justify-content: end;
 }
 .user-details p {
-  margin: 0 15px;
+  margin: 0 15px 0 0;
 }
 .notification {
   width: 80%;
@@ -265,5 +305,20 @@ p {
 }
 .router-icon {
   margin: 0 7px 3px 0;
+}
+.mobile-nav-content {
+  background: #404690;
+  color: white;
+}
+.user-name{
+  margin:0 2px 0 5px;
+}
+@media (max-width: 768px) {
+  .main {
+    margin: 0 0 0 0;
+    /* background: black; */
+    /* height: 100vh; */
+    padding: 0;
+  }
 }
 </style>
