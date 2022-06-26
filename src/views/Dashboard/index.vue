@@ -54,7 +54,7 @@
         </div>
       </div>
       <div className="row">
-        <div className="col-sm-12 col-md-12 col-lg-7">
+        <div className="col-sm-12 col-md-12 col-lg-7 feed-wrapper">
           <div
             className="d-sm-block d-md-flex justify-content-between align-items-center post-header  py-1 mb-1"
           >
@@ -377,6 +377,16 @@ p {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-gap: 12px;
+  }
+  .feed-wrapper {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1030px) {
+  .post-header {
+    display: flex !important;
   }
 }
 </style>

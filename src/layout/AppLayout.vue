@@ -10,7 +10,7 @@
           v-bind:key="item.name"
           className="mb-3 router-container"
         >
-          <router-link :to="{ path: item.url }" class="router-link">
+          <router-link :to="{ path: item.url }" class="router-link text-truncate w-100 ">
             <img
               v-bind:src="item.activeIcon"
               className="router-icon"
@@ -39,26 +39,34 @@
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-between align-items-center py-3 px-3 mb-3 d-md-none mobile-nav-content">
+      <div
+        className="d-flex justify-content-between align-items-center py-3 px-3 mb-3 d-md-none mobile-nav-content"
+      >
         <div>
-          <img src='../assets/mobile-nav.png'/>
-          </div>
+          <img src="../assets/mobile-nav.png" />
+        </div>
         <div className="d-flex align-items-center justify-content-end">
           <div>
-            <img className="notification-" src="../assets/notification.png" width='30' />
+            <img
+              className="notification-"
+              src="../assets/notification.png"
+              width="30"
+            />
           </div>
-            <p class="user-name">Hi, Olayimika</p>
+          <p class="user-name">Hi, Olayimika</p>
           <div className="">
-            <img className="" src="../assets/user.png" width='30' />
+            <img className="" src="../assets/user.png" width="30" />
           </div>
         </div>
       </div>
-      <div className="mobile-search-container d-sm-block d-md-none mb-3 mx-auto ">
-          <div className="search-icon">
-            <img src="../assets/search.png" />
-          </div>
-          <input type="text" className="search-field" placeholder="Search" />
+      <div
+        className="mobile-search-container d-sm-flex d-md-none mb-3 mx-auto "
+      >
+        <div className="search-icon">
+          <img src="../assets/search.png" />
         </div>
+        <input type="text" className="search-field" placeholder="Search" />
+      </div>
       <slot></slot>
     </div>
   </div>
@@ -238,7 +246,7 @@ p {
   align-items: center;
   width: 300px;
 }
-.mobile-search-container{
+.mobile-search-container {
   background: #f0f0f0;
 
   border-radius: 10px;
@@ -310,8 +318,8 @@ p {
   background: #404690;
   color: white;
 }
-.user-name{
-  margin:0 2px 0 5px;
+.user-name {
+  margin: 0 2px 0 5px;
 }
 @media (max-width: 768px) {
   .main {
@@ -321,4 +329,6 @@ p {
     padding: 0;
   }
 }
+
+
 </style>
